@@ -9,6 +9,19 @@
             background-color: black;
             color: aliceblue;
         }
+        :root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+    --tor-color:rgb(255, 215, 222);
+    --light-pink: rgb(255, 241, 243);
+    --half-pink: rgb(255, 182, 194);
+    --strong-pink: rgb(255, 151, 169);
+    --mygreen-color: rgb(190, 255, 190);
+    --heart-color: #f20044;
+           }
+
         h1 {
             text-align: center;
             font-size: 4rem;
@@ -40,6 +53,52 @@
             justify-content: center;
             left: 500px;
         }
+        @keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.08);
+    } }
+    
+        .heart{
+    width: 50px;
+    height: 50px;
+    background: var(--heart-color);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 50%;
+    top: 150px;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px var(--heart-color);
+    animation: heart 0.6s linear infinite;
+}
+.heart::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--heart-color);
+    border-radius: 50px;
+    top: -23px;
+    box-shadow: -10px -10px 90px var(--heart-color);
+}
+.heart::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--heart-color);
+    border-radius: 50px;
+    right: -23px;
+    box-shadow: 10px 10px 90px var(--heart-color);
+}
+
         
     </style>
 </head>
@@ -61,6 +120,7 @@
                     <a href="page3.html">อินเทอร์เน็ตกับการเรียนรู้</a>
                 </div>
                    
+                <div class="heart"></div>
                 
 </body>
 </html>
